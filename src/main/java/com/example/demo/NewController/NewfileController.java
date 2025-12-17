@@ -28,3 +28,13 @@ this.service = service;
     }
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable Long id,
+     @Valid @RequestBody NewfileEntity student) {
+        return service.update(id, student);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteStudent(@PathVariable Long id) {
+        service.delete(id);
+    }
+}
