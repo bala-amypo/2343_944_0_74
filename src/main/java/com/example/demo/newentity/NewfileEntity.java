@@ -1,5 +1,6 @@
 package com.example.demo.newentity;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -7,12 +8,13 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="student")
+@Table(name="Student")
 public class NewfileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "should not contain spaces")
+    @Column(unique=true)
     private String name;
     @NotBlank(message = "no blank allowed")
     @Email(message = "invalid format")
