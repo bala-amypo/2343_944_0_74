@@ -20,6 +20,7 @@ public class NewfileServiceImpl implements NewfileService {
 
     @Override
     public NewfileEntity getidval(Long id) {
+        
     }
 
     @Override
