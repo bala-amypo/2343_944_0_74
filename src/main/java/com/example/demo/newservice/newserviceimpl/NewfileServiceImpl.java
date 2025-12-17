@@ -34,10 +34,11 @@ public class NewfileServiceImpl implements NewfileService {
             existing.setName(newfile.getName());
             existing.setEmail(newfile.getEmail());
             return rep.save(existing); 
+    }
 
     @Override
     public void delete(Long id) {
-        
+
       rep.delete(Long id);
     }
 }
