@@ -9,7 +9,6 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 @Table(name="student")
 public class NewfileEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
