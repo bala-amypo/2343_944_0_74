@@ -30,4 +30,12 @@ Studentservice src;
     public Studententity getIdval(@PathVariable int id){
         return src.id(id);
     }
+    @PutMapping("/updatedata/{id}")
+    public Studententity update(@PathVariable int id,@RequestBody Studententity st){
+        return src.updateStudent(id,st);
+    }
+    @DeleteMapping("/delete/{id}")
+    public Studententity deleteStudent(@PathVariable int id){
+        return src.deleteStudent(id);
+    }
 }
