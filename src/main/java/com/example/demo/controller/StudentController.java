@@ -31,4 +31,13 @@ public class Studentcontoller {
     public Studententity getidval(@PathVariable int id) {
       return src.id(id);
     }
+    @PutMapping("/put/{id}")
+    public Studententity update(@PathVariable int id,@RequestBody Studententity st){
+        return src.put(id,st);
+    }
+    @DeleteMapping("/delete/{id}")
+    public Studententity delete(@PathVariable int id){
+        return src.del(id);
+    }
 }
+
