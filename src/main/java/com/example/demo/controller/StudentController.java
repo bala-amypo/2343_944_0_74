@@ -40,4 +40,3 @@ public class Studentcontoller {
         return src.del(id);
     }
 }
-
